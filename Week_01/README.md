@@ -10,7 +10,7 @@
 
      - 脉络相连
 
-       ElonMuskOfficial **reddit**
+       ElonMuskOfficial **reddit** **MindNode**
 
        ![image-20200519224036002](E:\work_idea\study\algorithm009-class02\img\image-20200519224036002.png)
 
