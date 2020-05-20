@@ -24,19 +24,20 @@ import java.util.Map;
 public class TwoSum {
 
     public static void main(String[] args){
-        int[] nums = { 3,2,4 };
+//        int[] nums = { 3,2,4 };
+        int[] nums = { 2, 7, 11, 15 };
         int target = 9;
         TwoSum test = new TwoSum();
         long start = System.currentTimeMillis();
-        int[] res = test.twoSum(nums,target);
+        int[] res = test.twoSum1(nums,target);
         System.out.println("耗时"+(System.currentTimeMillis() - start)+"毫秒");
         System.out.println("res="+ Arrays.toString(res));
     }
 
     /**
-     * hashmap
-     * 时间复杂度：
-     * 空间复杂度：
+     * 两次循环 hashmap
+     * 时间复杂度：O(n)
+     * 空间复杂度：O(n)
      * @param nums
      * @param target
      * @return
@@ -51,6 +52,28 @@ public class TwoSum {
             if(m.containsKey(n)&&m.get(n)!=i){
                 return new int[]{i,m.get(n)};
             }
+        }
+        throw new IllegalArgumentException("No two sum solution");
+    }
+
+
+    /**
+     * 一次循环 hashmap
+     * 时间复杂度：O(n)
+     * 空间复杂度：O(1)
+     * @param nums
+     * @param target
+     * @return
+     */
+    private int[] twoSum1(int[] nums, int target) {
+        Map<Integer,Integer> m = new HashMap<Integer, Integer>();
+
+        for (int i = 0; i < nums.length; i++) {
+            int n = target - nums[i];
+            if(m.containsKey(n)&&m.get(n)!=i){
+                return new int[]{i,m.get(n)};
+            }
+            m.put(nums[i],i);
         }
         throw new IllegalArgumentException("No two sum solution");
     }
