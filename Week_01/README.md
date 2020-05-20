@@ -2,7 +2,7 @@
 
 1. 学习方法的来源《异类,不一样的成功启示录》
 
-   ![1589893114936](E:\work_idea\study\algorithm009-class02\img\1589893114936.png)
+   ![1589893114936](https://raw.githubusercontent.com/stephenZkang/algorithm009-class02/master/img/1589893114936.png)
 
    - Chunk it up 切碎知识点
 
@@ -12,7 +12,7 @@
 
        ElonMuskOfficial **reddit** **MindNode**
 
-       ![image-20200519224036002](E:\work_idea\study\algorithm009-class02\img\image-20200519224036002.png)
+       ![image-20200519224036002](https://raw.githubusercontent.com/stephenZkang/algorithm009-class02/master/img/image-20200519224036002.png)
 
        数据结构和算法
 
