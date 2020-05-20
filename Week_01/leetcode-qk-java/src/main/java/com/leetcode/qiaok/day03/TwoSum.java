@@ -24,6 +24,7 @@ import java.util.Map;
 public class TwoSum {
 
     public static void main(String[] args){
+
 //        int[] nums = { 3,2,4 };
         int[] nums = { 2, 7, 11, 15 };
         int target = 9;
