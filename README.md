@@ -13,7 +13,7 @@
 2. 每周均有一个 `REDAME.md` 文档，你可以将自己当周的学习心得以及做题过程中的思考记录在该文档中。
 
 ## 作业提交规则
- 
+
 1. 先将本仓库 Fork 到自己 GitHub 账号下。
 2. 将 Fork 后的仓库 Clone 到本地，然后在本地仓库中对应周的目录下新建或修改自己的代码作业，当周的学习总结写在对应周的README.md文件里。
 3. 在本地仓库完成作业后，push 到自己的 GitHub 远程仓库。
@@ -21,6 +21,12 @@
 5. 提交issue请务必按照规定格式进行提交，否则作业统计工具将抓取不到你的作业提交记录。 
 
 详细的作业提交流程可以查阅：https://shimo.im/docs/m5rtM8K8rNsjw5jk/ 
+
+
+
+本周任务详情可以见GitHub：https://github.com/algorithm009-class02/algorithm009-class02/issues/2
+完成作业需要将自己的作业仓库链接贴至 https://github.com/algorithm009-class02/algorithm009-class02/issues/1
+作业提交具体流程和规则请查看：https://shimo.im/docs/m5rtM8K8rNsjw5jk/
 
 
 ## 注意事项
