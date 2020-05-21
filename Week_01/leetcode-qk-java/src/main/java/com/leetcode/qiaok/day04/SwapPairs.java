@@ -25,7 +25,7 @@ public class SwapPairs {
         head.next.next = new ListNode(3);
         head.next.next.next = new ListNode(4);
         long start = System.currentTimeMillis();
-        ListNode res = test.swapPair(head);
+        ListNode res = test.swapPairs(head);
         System.out.println("耗时"+(System.currentTimeMillis() - start)+"毫秒");
         System.out.println("res=" + res);
     }
@@ -35,13 +35,13 @@ public class SwapPairs {
      * @param head
      * @return
      */
-    private ListNode swapPair(ListNode head) {
+    private ListNode swapPairs(ListNode head) {
         if ((head == null) || (head.next == null)) {
             return head;
         }
         ListNode firstNode = head;
         ListNode secondNode = head.next;
-        firstNode.next = swapPair(secondNode.next);
+        firstNode.next = swapPairs(secondNode.next);
         secondNode.next=firstNode;
         return secondNode;
     }
