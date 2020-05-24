@@ -38,11 +38,30 @@ public class ClimbStairs {
         ClimbStairs test = new ClimbStairs();
         int n = 2;
         long start = System.currentTimeMillis();
-        int res = test.climbStairs(n);
+        int res = test.climbStairs1(n);
         System.out.println("耗时"+(System.currentTimeMillis() - start)+"毫秒");
         System.out.println("res=" + res);
     }
 
+    /**
+     * 动态规划
+     * 时间复杂度：O(n)
+     * 空间复杂度：O(n)
+     * @param n
+     * @return
+     */
+    private int climbStairs1(int n) {
+        if (n == 1) {
+            return 1;
+        }
+        int[] dp = new int[n + 1];
+        dp[1] = 1;
+        dp[2] = 2;
+        for (int i = 3; i <= n; i++) {
+            dp[i] = dp[i - 1] + dp[i - 2];
+        }
+        return dp[n];
+    }
     /**
      * 记忆递归
      * 时间复杂度：O(n)
