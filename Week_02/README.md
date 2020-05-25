@@ -8,6 +8,6 @@
 
    HashSet底层是以HashMap实现的，将key放值，有去重的作用，value放一个固定值
 
-   ![image-20200525233135032](E:\work_idea\study\algorithm009-class02\img\image-20200525233135032.png)
+   ![image-20200525233135032](https://raw.githubusercontent.com/stephenZkang/algorithm009-class02/master/img/image-20200525233135032.png)
 
 3. Java中HashMap的实现
