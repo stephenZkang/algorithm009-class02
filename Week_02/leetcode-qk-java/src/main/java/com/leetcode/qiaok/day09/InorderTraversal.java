@@ -1,6 +1,7 @@
 package com.leetcode.qiaok.day09;
 
 
+import java.util.Deque;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -19,8 +20,7 @@ import java.util.List;
  *
  * 输出: [1,3,2]
  * 进阶: 递归算法很简单，你可以通过迭代算法完成吗？
- *
- * 通过次数161,435提交次数225,826
+ * 中序：左中右
  *
  * @since 2020-05-27
  * @author qiaok
@@ -32,10 +32,15 @@ public class InorderTraversal {
         root.right = new TreeNode(2);
         root.right.left = new TreeNode(3);
         InorderTraversal test = new InorderTraversal();
-        List<Integer> res = test.inorderTraversal(root);
+        List<Integer> res = test.inorderTraversal1(root);
         System.out.println("res="+res.toString());
     }
 
+    /**
+     * 递归
+     * @param root
+     * @return
+     */
     private List<Integer> inorderTraversal(TreeNode root) {
         List<Integer> list = new LinkedList<>();
         inorder(root,list);
@@ -50,6 +55,32 @@ public class InorderTraversal {
         inorder(root.left,list);
         list.add(root.val);
         inorder(root.right,list);
+    }
+
+    /**
+     * 迭代
+     * @param root
+     * @return
+     */
+    private List<Integer> inorderTraversal1(TreeNode root) {
+        List<Integer> list = new LinkedList<>();
+        Deque<TreeNode> stack = new LinkedList<>();
+        if(root == null){
+            return  list;
+        }
+        stack.add(root);
+        while (!stack.isEmpty()){
+            TreeNode node = stack.pollLast();
+            if(node.left!=null){
+                stack.add(node.left);
+            }
+            list.add(node.val);
+            if(node.right!=null){
+                stack.add(node.right);
+            }
+        }
+
+        return list;
     }
 
 }
