@@ -32,7 +32,7 @@ public class TwoSum {
         int[] nums = {2, 7, 11, 15};
         int target = 9;
         long start = System.currentTimeMillis();
-        int[] res = test.twoSum(nums,target);
+        int[] res = test.twoSum1(nums,target);
         System.out.println("耗时"+(System.currentTimeMillis() - start)+"毫秒");
         System.out.println("res="+ Arrays.toString(res));
     }
@@ -54,6 +54,26 @@ public class TwoSum {
                 if(m.containsKey(key)&&m.get(key)!=i){
                     return new int[]{i,m.get(key)};
                 }
+            }
+        }
+        throw new RuntimeException("");
+    }
+
+    /**
+     * HashSet
+     * @param nums
+     * @param target
+     * @return
+     */
+    private int[] twoSum1(int[] nums, int target) {
+        if(nums!=null&&nums.length>0){
+            HashMap<Integer,Integer> m = new HashMap<Integer, Integer>();
+            for (int i = 0; i < nums.length; i++) {
+                int key = target - nums[i];
+                if(m.containsKey(key)&&m.get(key)!=i){
+                    return new int[]{i,m.get(key)};
+                }
+                m.put(nums[i],i);
             }
         }
         throw new RuntimeException("");
