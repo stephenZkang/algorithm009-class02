@@ -46,11 +46,11 @@ public class LowestCommonAncestor {
         root.right.left = new TreeNode(0);
         root.right.right = new TreeNode(8);
         TreeNode p = new TreeNode(5);
-        TreeNode q = new TreeNode(1);
+        TreeNode q = new TreeNode(4);
         long start = System.currentTimeMillis();
         TreeNode res = test.lowestCommonAncestor(root,p,q);
         System.out.println("耗时"+(System.currentTimeMillis() - start)+"毫秒");
-        System.out.println("res"+res);
+        System.out.println("res="+res.val);
     }
 
     /**
@@ -61,7 +61,7 @@ public class LowestCommonAncestor {
      * @return
      */
     private TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
-        if(root == null || root == p || root == q) return root;
+        if(root == null || root.val == p.val || root.val == q.val) return root;
         TreeNode left = lowestCommonAncestor(root.left, p, q);
         TreeNode right = lowestCommonAncestor(root.right, p, q);
         if(left == null) return right;
