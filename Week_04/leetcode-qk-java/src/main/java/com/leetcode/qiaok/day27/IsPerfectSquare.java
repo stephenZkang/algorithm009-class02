@@ -45,7 +45,8 @@ public class IsPerfectSquare {
         if (num < 2) {
             return true;
         }
-
+        //此处类型需为long，否则会报超出时间范围的异常
+        //如果想要使用int类型，可以使用模余的思路来做
         long left = 2, right = num / 2, x, guessSquared;
         while (left <= right) {
             x = left + (right - left) / 2;
