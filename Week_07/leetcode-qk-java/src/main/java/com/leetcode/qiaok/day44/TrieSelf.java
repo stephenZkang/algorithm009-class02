@@ -1,5 +1,4 @@
 package com.leetcode.qiaok.day44;
-
 /**
  * 实现一个 Trie (前缀树)，包含 insert, search, 和 startsWith 这三个操作。
  *
@@ -23,22 +22,22 @@ package com.leetcode.qiaok.day44;
  * @since 2020-06-30
  * @author qiaok
  */
-public class Trie {
+public class TrieSelf {
 
-    private TrieNode root;
+    private TrieNodeSelf root;
 
     /** Initialize your data structure here. */
-    public Trie() {
-        root = new TrieNode();
+    public TrieSelf() {
+        root = new TrieNodeSelf();
     }
 
     /** Inserts a word into the trie. */
     public void insert(String word) {
-        TrieNode node = root;
+        TrieNodeSelf node = root;
         for (int i = 0; i < word.length(); i++) {
             char currentChar = word.charAt(i);
             if (!node.containsKey(currentChar)) {
-                node.put(currentChar, new TrieNode());
+                node.put(currentChar, new TrieNodeSelf());
             }
             node = node.get(currentChar);
         }
@@ -47,20 +46,20 @@ public class Trie {
 
     /** Returns if the word is in the trie. */
     public boolean search(String word) {
-        TrieNode node = searchPrefix(word);
+        TrieNodeSelf node = searchPrefix(word);
         return node != null && node.isEnd();
     }
 
     /** Returns if there is any word in the trie that starts with the given prefix. */
     public boolean startsWith(String prefix) {
-        TrieNode node = searchPrefix(prefix);
+        TrieNodeSelf node = searchPrefix(prefix);
         return node != null;
     }
 
     // search a prefix or whole key in trie and
     // returns the node where search ends
-    private TrieNode searchPrefix(String word) {
-        TrieNode node = root;
+    private TrieNodeSelf searchPrefix(String word) {
+        TrieNodeSelf node = root;
         for (int i = 0; i < word.length(); i++) {
             char curLetter = word.charAt(i);
             if (node.containsKey(curLetter)) {
@@ -71,5 +70,6 @@ public class Trie {
         }
         return node;
     }
+
 
 }

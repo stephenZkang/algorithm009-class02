@@ -1,25 +1,25 @@
 package com.leetcode.qiaok.day44;
 
-class TrieNode {
+class TrieNodeSelf {
 
     // R links to node children
-    private TrieNode[] links;
+    private TrieNodeSelf[] links;
 
     private final int R = 26;
 
     private boolean isEnd;
 
-    public TrieNode() {
-        links = new TrieNode[R];
+    public TrieNodeSelf() {
+        links = new TrieNodeSelf[R];
     }
 
     public boolean containsKey(char ch) {
         return links[ch -'a'] != null;
     }
-    public TrieNode get(char ch) {
+    public TrieNodeSelf get(char ch) {
         return links[ch -'a'];
     }
-    public void put(char ch, TrieNode node) {
+    public void put(char ch, TrieNodeSelf node) {
         links[ch -'a'] = node;
     }
     public void setEnd() {
