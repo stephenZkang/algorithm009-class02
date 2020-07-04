@@ -14,28 +14,32 @@ package com.leetcode.qiaok.day40;
  * 矩阵内的矩形区域面积必须大于 0。
  * 如果行数远大于列数，你将如何解答呢？
  *
- * https://leetcode-cn.com/problems/max-sum-of-rectangle-no-larger-than-k/
- * @since 2020-06-26
+ * @since 2020-06-27
  * @author qiaok
  */
-public class MaxSumSubmatrix {
+public class MaxSumSubMatrix {
 
+    /**
+     * 测试
+     * @param args
+     */
     public static void main(String[] args){
-        MaxSumSubmatrix test = new MaxSumSubmatrix();
+        MaxSumSubMatrix test = new MaxSumSubMatrix();
         int[][] matrix = {
-            { 1, 0,  1},
-            { 0, -2, 3}
+            { 1, 0, 1 },
+            { 0,-2, 3 }
         };
         int k = 2;
         long start = System.currentTimeMillis();
         int res = test.maxSumSubmatrix(matrix,k);
         System.out.println("耗时"+(System.currentTimeMillis() - start)+"毫秒");
         System.out.println("res="+res);
+
     }
 
     /**
      * 时间复杂度：
-     * 空间复杂度:
+     * 空间复杂度：
      * @param matrix
      * @param k
      * @return
