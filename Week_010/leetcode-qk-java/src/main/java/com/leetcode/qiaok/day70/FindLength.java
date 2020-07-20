@@ -24,6 +24,7 @@ package com.leetcode.qiaok.day70;
 public class FindLength {
     public static void main(String[] args){
         FindLength test = new FindLength();
+
         int[] A = { 1,2,3,2,1 };
         int[] B = { 3,2,1,4,7 };
         long start = System.currentTimeMillis();
