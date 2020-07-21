@@ -2,24 +2,24 @@ package com.leetcode.qiaok.day64;
 
 /**
  * 64. 最小路径和
- * 给定一个包含非负整数的 m x n 网格，请找出一条从左上角到右下角的路径，使得路径上的数字总和为最小。
+ *  给定一个包含非负整数的 m x n 网格，请找出一条从左上角到右下角的路径，使得路径上的数字总和为最小。
  *
- * 说明：每次只能向下或者向右移动一步。
+ *  说明：每次只能向下或者向右移动一步。
  *
- * 示例:
+ *  示例:
  *
- * 输入:
- * [
- *   [1,3,1],
- *   [1,5,1],
- *   [4,2,1]
- * ]
- * 输出: 7
- * 解释: 因为路径 1→3→1→1→1 的总和最小。
+ *  输入:
+ *  [
+ *    [1,3,1],
+ *    [1,5,1],
+ *    [4,2,1]
+ *  ]
+ *  输出: 7
+ *  解释: 因为路径 1→3→1→1→1 的总和最小。
  *
- * https://leetcode-cn.com/problems/minimum-path-sum/
- * @since 2020-06-22
- * @author qiaok
+ *  https://leetcode-cn.com/problems/minimum-path-sum/
+ *  @since 2020-06-22
+ *  @author qiaok
  */
 public class MinPathSum {
 
@@ -38,8 +38,8 @@ public class MinPathSum {
 
     /**
      * 一维动态规划
-     * 时间复杂度：O(mn)
-     * 空间复杂度：O(n)
+     *      时间复杂度：O(mn)
+     *      空间复杂度：O(n)
      * @param grid
      * @return
      */
@@ -63,9 +63,9 @@ public class MinPathSum {
 
     /**
      * 一维动态规划
-     * 时间复杂度：O(mn)
-     * 空间复杂度：O(n)
-     * 执行用时： 2 ms , 在所有 Java 提交中击败了 98.10% 的用户
+     *      时间复杂度：O(mn)
+     *      空间复杂度：O(n)
+     *      执行用时： 2 ms , 在所有 Java 提交中击败了 98.10% 的用户
      * @param grid
      * @return
      */
